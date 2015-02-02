@@ -20,6 +20,8 @@ html {
 
 body{
   font-family: sans-serif;
+  background-color: $background;
+  color: $text-color;
   @include zero;
   // Hides close button if there is no js
   &.noscript{
@@ -30,13 +32,18 @@ body{
 }
 
 header {
-  padding: 0 1em;
+  padding: 1rem 1rem;
   position: relative;
   .toggle-btn{
     position: absolute;
     right: 1em;
     top: 0;
   }
+}
+
+.navigation {
+  background-color: $nav-main;
+  padding-top: 0;
 }
 
 .navigation ul{
@@ -49,7 +56,10 @@ header {
       text-align: center;
       border-bottom: 1px solid $light-grey;
       text-decoration: none;
+      color: $text-color;
+      text-transform: uppercase;
     }
+
     &:first-child a{
       border-top: 1px solid $light-grey;
     }
@@ -62,7 +72,7 @@ header {
   height: 40px;
   width: 40px; 
   i{
-    border: 1px solid $light-grey;
+    border: none;
     padding: .5em; 
   }
   span{
